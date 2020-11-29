@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+    title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+        <a href="#"><img src="{% static 'img/rotom-wash.gif'%}" style="width:65px;"
+                class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                class="fa fa-bars"></i></span>
+        <div class="w3-container">
+            <h1><b>Lavandería Rotom</b></h1>
+            <div class="w3-section w3-bottombar w3-padding-16">
+                <span class="w3-margin-right">Acerca de:</span>
+                <button class="w3-button w3-black">&#128209;Servicios</button>
+                <a href="lavadora.html" onclick="w3_close()"><button class="w3-button w3-white w3-hide-small">&#x1F4A6;
+                        Lavar</button></a>
+                <a href="ubicacion.html" onclick="w3_close()"><button
+                        class="w3-button w3-white w3-hide-small"></i>&#x1F4CD;
+                        Ubicación</button></a>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/alfombra2.jpg'%}" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Lavado de Alfombras</b></p>
+                <p>Contamos con maquinaria profesional para brindar un mejor lavado a sus alfombras.</p>
+                <p>Proceso: Aspirado inicial, lavado con shampoo para alfombras, aspirado y secado. </p>
+
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+            <img src="{% static 'img/ropa2.jpg' %}" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Lavado de Ropa</b></p>
+                <p>Ropa de todo tipo: trajes, chaquetas, vestidos, buzos, ropa de lana, sintética, etc.</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container">
+            <img src="{% static 'img/cobertores1.jpg'%}" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p><b>Lavado de Cobertores</b></p>
+                <p>Con nuestras lavadoras industriales lavamos todo tipo de cobertores y frazadas, incluso los de gran
+                    tamaño
+                    sin dañarlos, ya sean sintéticos, de pluma o de polar.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h1>¿Cómo funcionamos? </h1>
+        <!-- como funcionamos -->
+        <div class="w3-row-padding" style="margin:0 -16px">
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-teal w3-xlarge w3-padding-32">1.Haz tu pedido</li>
+                    <img src="{% static 'img/pedido.jpg'%}" style="width:40%">
+                    <p>Realiza tu pedido a nuestra página</p>
+
+                </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-teal w3-xlarge w3-padding-32">2.Retiramos tu pedido</li>
+                    <img src="{% static 'img/retiro.jpg'%}" style="width:40%">
+                    <p>Vamos a tu domicilio a retirar el pedido de forma gratuita</p>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="w3-row-padding" style="margin:0 -16px">
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-teal w3-xlarge w3-padding-32">3.Limpieza</li>
+                    <img src="{% static 'img/proceso.jpg'%}" style="width:40%">
+                    <p>Efectuamos la limpieza profunda de tus artículos</p>
+
+                </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-teal w3-xlarge w3-padding-32">4.Despacho</li>
+                    <img src="{% static 'img/despacho.jpg'%}" style="width:40%">
+                    <p>Hacemos entrega de tu pedido a la puerta de tu casa</p>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- Tabla de Precios -->
+        <h1>Nuestros Precios </h1>
+        <div class="w3-row-padding" style="margin:0 -16px">
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-black w3-xlarge w3-padding-32">Alfombras</li>
+                    <li class="w3-padding-16">Pequeña: $5.000</li>
+                    <li class="w3-padding-16">Mediana: $15.000</li>
+                    <li class="w3-padding-16">Grande: $20.000</li>
+                    <li class="w3-padding-16">Extra Grande: $25.000</li>
+
+
+                </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-black w3-xlarge w3-padding-32">Ropa</li>
+                    <li class="w3-padding-16">Canasto 5kg: $6.000</li>
+                    <li class="w3-padding-16">Vestidos: $10.000</li>
+                    <li class="w3-padding-16">Chaquetas: $5.000</li>
+                    <li class="w3-padding-16">Trajes: $10.000</li>
+
+
+                </ul>
+            </div>
+
+            <div class="w3-third">
+                <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+                    <li class="w3-black w3-xlarge w3-padding-32">Cobertores</li>
+                    <li class="w3-padding-16">1 plaza: $6.000</li>
+                    <li class="w3-padding-16">1 y 1/2 plaza: $7.000</li>
+                    <li class="w3-padding-16">2 plazas: $8.000</li>
+                    <li class="w3-padding-16">King: $10.000</li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+        {% endblock %}

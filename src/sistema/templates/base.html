@@ -1,0 +1,111 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavandería Rotom :D</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+    <script src="{% static 'js/burbujas.js' %}"></script>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <img src="{% static 'img/rotom-wash.gif'%}" style="width:75%;" class="w3-round"><br><br>
+            <h4><b>Lavandería Rotom</b></h4>
+            <p class="w3-text-grey">Bienvenidos a nuestra página</p>
+            <p>
+                Bienvenido <b>{{request.user.username}}</b>
+            </p>
+
+        </div>
+        <div class="w3-bar-block">
+            <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>INICIO</a>
+            <a href="../login.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>LOGIN</a>
+            <a href="../nuevo_cliente.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>ÚNETE</a>
+            <a href="contactanos.html" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>CONTÁCTANOS</a>
+            <a href="/logout" target="_blank" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"> <i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>DESCONECTARSE</a>
+        </div>
+
+        <div class="w3-panel w3-large">
+            <a href="https://wa.link/3i2rs2" target="_blank"><i class="fa fa fa-whatsapp w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/lavanderiahualpen/" target="_blank"><i
+                    class="fa fa-instagram w3-hover-opacity"></i></a>
+
+            <p class="w3-text-grey">Horario de atención:
+                Lunes a Sábado de 09:00 am a 21:00 pm</p>
+        </div>
+    </nav>
+
+    {%block contenido %}
+
+
+
+    {%endblock%}
+
+    <!-- footer -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+
+    <div class="w3-main">
+        <!-- <div class="w3-main" style="margin-left:300px"> en caso de...-->
+        <br><br><br><br><br><br><br><br><br>
+
+
+        <footer class="w3-container w3-padding-32 w3-dark-grey" margin="bottom">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h1>¡No olviden!</h1>
+                    <P>Disponemos de retiro y entrega GRATUITA para tus pedidos en todo Hualpén y sus alrededores
+                        &#128515;</P>
+
+                </div>
+                <div class="w3-third">
+                    <h3>Acerca de Nosotros</h3>
+                    <p>Somos una lavandería familiar de Hualpén fundada hace más de 10 años. Siempre dedicados al rubro
+                        de la
+                        limpieza ya sea con agua o en seco.</p>
+                </div>
+
+                <div class="w3-third">
+                    <h3>Contacto</h3>
+                    <p>lavanderiarotom@gmail.com</p>
+                    <p> +56935805948</p>
+                    <p>Lunes a Sábado de 09:00 am a 21:00 pm</p>
+
+                </div>
+
+            </div>
+
+
+    </div>
+    </footer>
+
+
+
+    <!-- End page content -->
+    </div>
+
+</body>
+
+</html>
